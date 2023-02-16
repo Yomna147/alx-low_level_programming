@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
  * main - prints the size
+ *Return 0
  */
 int main(void)
 {
@@ -18,5 +19,7 @@ printf("Size of a char: %1u byte(s)\n" , (unsigned long)
 sizeof(c));
 printf("Size of a char: %1u byte(s)\n" , (unsigned long)
 sizeof(d));
-return (0)
+printf("Size of a char: %1u byte(s)\n" , (unsigned long)
+sizeof(f));
+return (0);
 }
