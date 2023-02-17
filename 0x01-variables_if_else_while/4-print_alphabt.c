@@ -1,8 +1,9 @@
 #include <stdio.h>
+
 /**
- * Main - prints the alphabet in lowercase, followed by a new line.
+ * main - Prints the alphabet in lowercase, except for q and e.
  *
- * Return: 0 always
+ * Return: Always 0.
  */
 int main(void)
 {
