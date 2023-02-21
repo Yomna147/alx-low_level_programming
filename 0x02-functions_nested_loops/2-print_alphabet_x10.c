@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
- * print_alphabet - print all lowercase character
+ * print_alphabet_x10 - print all lowercase character 10times
+ *
+ * Description: using nested while-for loop
  *
  * Return: void
  */
@@ -14,6 +16,6 @@ void print_alphabet(void)
 	{
 		for (lc = 'a'; lc <= 'z'; lc++)
 			_putchar(lc);
-		_putchar('\n')
+		_putchar('\n');
 	}
 }
