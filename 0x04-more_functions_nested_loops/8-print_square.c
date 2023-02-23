@@ -1,22 +1,22 @@
 #include "main.h"
 
 /**
- * print_square- prints a square, followed by a new line.
- * @size: sie of the square
- *
- * Return: void
+ * print_square - prints hashes square
+ * @size: size of the square
+ * Return: no return
  */
 void print_square(int size)
 {
-	int x;
-  int y;
+	int i, j;
 
-	if (size <= 0)
-		_putchar('\n');
-	for (x = 0; x < size; ++x)
+	for (i = 0; i < size; i++)
 	{
-		for (y = 0; y < size; y++)
+		for (j = 0; j < size; j++)
+		{
 			_putchar('#');
-		_putchar('\n');
+		}
+		if (i != size - 1)
+			_putchar('\n');
 	}
+	_putchar('\n');
 }
