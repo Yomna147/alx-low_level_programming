@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - Program tha prints the number from 1 t0 100
@@ -9,27 +9,31 @@
  */
 int main(void)
 {
-	int x
-		for (x = 1; x <= 100; x++)
-		{
+	int x;
+
+	for (x = 1; x <= 100; x++)
+	{
 		if (x % 3 == 0 && x % 5 != 0)
 		{
-			printf(" fizz");
+			printf(" Fizz");
 		}
 		else if (x % 5 == 0 && x % 3 != 0)
 		{
-			printf(" buzz");
+			printf(" Buzz");
 		}
-		else if (x % 3 == 0 && x % 5 != 0)
+		else if (x % 3 == 0 && x % 5 == 0)
 		{
-			printf(" fizzbuzz");
+			printf(" FizzBuzz");
+		}
 		else if (x == 1)
 		{
 			printf("%d", x);
 		}
 		else
+		{
 			printf(" %d", x);
 		}
+	}
 	printf("\n");
 
 	return (0);
