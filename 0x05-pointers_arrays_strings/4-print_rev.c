@@ -1,13 +1,14 @@
 #include "main.h"
 
 /**
- * puts2 - A function that prints one char out of 2 of a string.
- * @str: string
+ * print_rev - A function that prints a string in reverse
+ * @s: The string
  * Return: no return
  */
 void print_rev(char *s)
 {
 	int count = 0;
+
 	while (count >= 0)
 	{
 		if (s[count] == '\0')
