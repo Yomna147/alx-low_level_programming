@@ -1,27 +1,23 @@
 #include "main.h"
-/**
- * _strspn - A program that gets the length of a prefix substring
- * @s: initial segment.
- * @accept: accepted bytes
- * Return: the number of accepted bytes
- */
-unsigned int _strspn(char *s, char *accept)
-{
-	unsigned int i, j, bool;
 
-	for (i = 0; *(s + i) != '\0'; i++)
+/**
+ * _strcmp - compares two strings
+ * @s1: first string to compare
+ * @s2: second string to compare
+ *
+ * Return: less than 0 if s1 is less than s2, 0 if they are
+ * equal, more than 0 if s1 is greater than s2
+ */
+int _strcmp(char *s1, char *s2)
+{
+	while (*s1 == *s2)
 	{
-		bool = 1;
-		for (j = 0; *(accept + j) != '\0'; j++)
+		if (*s1 == '\0')
 		{
-			if (*(s + i) == *(accept + j))
-			{
-				bool = 0;
-				break;
-			}
+			return (0);
 		}
-		if (bool == 1)
-			break;
+		s1++;
+		s2++;
 	}
-	return (i);
+	return (*s1 - *s2);
 }

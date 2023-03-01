@@ -1,31 +1,20 @@
 #include "main.h"
-
 /**
- * _strstr - finds the first occurrence of the substring.
- * needle in the string haystack.
- * @haystack: entire string.
- * @needle: substring.
- * Return: pointer to the beginning of located substring or
- * Null if the substring is not found.
+ * string_toupper - changes all lowercase letters of string
+ * to uppercase
+ * @s: string to modify
+ *
+ * Return: the resulting string
  */
-char *_strstr(char *haystack, char *needle)
+char *string_toupper(char *s)
 {
-	char *bhaystack;
-	char *pneedle;
+	int i;
 
-	while (*haystack != '\0')
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		bhaystack = haystack;
-		pneedle = needle;
-
-		while (*haystack != '\0' && *pneedle != '\0' && *haystack == *pneedle)
-		{
-			haystack++;
-			pneedle++;
-		}
-		if  (!*pneedle)
-			return (bhaystack);
-		haystack = bhaystack + 1;
+		if (s[i] >= 'a' && s[i] <= 'z')
+			s[i] = s[i] - 32;
 	}
-	return (0);
+
+	return (s);
 }

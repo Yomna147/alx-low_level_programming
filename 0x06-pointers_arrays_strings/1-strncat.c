@@ -1,18 +1,27 @@
 #include "main.h"
 /**
- * _strchr - locates a character in a string
- * @s: string.
- * @c: character.
- * Return: the pointer to the first occurance of the character c
+ * _strncat - concatenates two string,
+ * @dest: destination.
+ * @src: source.
+ * @n: amount of bytes used from src.
+ * Return: the pointer to dust.
  */
-char *_strchr(char *s, char c)
+char *_strncat(char *dest, char *src, int n)
 {
-	unsigned int i = 0;
+	int count = 0, count2 = 0;
 
-	for (; *(s + i) != '\0'; i++)
-		if (*(s + i) == c)
-			return (s + i);
-	if (*(s + i) == c)
-		return (s + i);
-	return ('\0');
+	while (*(dest + count) != '\0')
+	{
+		count++;
+	}
+
+	while (count2 < n)
+	{
+		*(dest + count) = *(src + count2);
+		if (*(src + count2) == '\0')
+			break;
+		count++;
+		count2++;
+	}
+	return (dest);
 }
