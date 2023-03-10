@@ -1,4 +1,7 @@
- function that prints a string folloed by a new line.
+#include "main.h"
+
+/**
+ * _puts - A function that prints a string folloed by a new line.
  * @str: input string
  * Return: no return
  */
@@ -11,4 +14,4 @@ void _puts(char *str)
 		_putchar(str[count]);
 	}
 	_putchar('\n');
-}:w
+}
